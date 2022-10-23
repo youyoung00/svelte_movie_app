@@ -1,11 +1,11 @@
-
 <script>
     import { link } from 'svelte-spa-router'
     import active from 'svelte-spa-router/active'
+    import Logo from '~/components/Logo.svelte'
 </script>
 
 <header>
-    HEADER!
+    <Logo />
     <a 
         use:link 
         use:active
@@ -24,4 +24,4 @@
     header :global(a.active) {
         color: red;
     }
-</style>
+</style> 

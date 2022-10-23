@@ -7,7 +7,7 @@
         {
             href: '/',
             name: 'Search',
-            // path: '/'
+            path: '/'
         },
         {
             href: '/movie/tt4520988',

@@ -1,9 +1,10 @@
 <script>
-    // console.log('1234')
+    import Router from 'svelte-spa-router'
     import Header from '~/components/Header.svelte'
+    import routes from '~/routes'
 </script>
 
 <Header />
-<h1>Svelet!</h1>
+<Router {routes}/>
 
 <style lang="scss"></style>

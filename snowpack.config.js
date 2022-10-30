@@ -13,22 +13,22 @@ module.exports = {
         src: '/_dist_'
     },
     plugins: [
-        // [
+        [
             '@snowpack/plugin-svelte'
-    //     , {
-    //         preprocess: require('svelte-preprocess')({
-    //             scss: {
-    //                 prependData: '@import "./src/scss/main.scss";'
-    //             },
-    //             postcss: {
-    //                 plugins: [
-    //                     require('autoprefixer')()
-    //                 ]
-    //             },
-    //             babel: babelOptions()
-    //         })
-    //     }
-    // ],
+        , {
+            preprocess: require('svelte-preprocess')({
+                scss: {
+                    prependData: '@import "./src/scss/main.scss";'
+                },
+                postcss: {
+                    plugins: [
+                        require('autoprefixer')()
+                    ]
+                },
+                babel: babelOptions()
+            })
+        }
+    ],
         ['@snowpack/plugin-babel', {
             transformOptions: babelOptions()
         }],

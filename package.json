@@ -26,5 +26,8 @@
     "snowpack": "^3.8.8",
     "svelte": "^3.52.0",
     "svelte-spa-router": "^3.3.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
   }
 }

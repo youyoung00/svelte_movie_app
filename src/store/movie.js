@@ -1,6 +1,6 @@
 import axios from 'axios'
 import _unionBy from 'lodash/unionBy'
-import {writable, get} from 'svelte/store'
+import { writable, get } from 'svelte/store'
 
 export const movies = writable([])
 export const loading = writable(false)

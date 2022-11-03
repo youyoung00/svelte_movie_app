@@ -4,6 +4,7 @@ import {writable, get} from 'svelte/store'
 
 export const movies = writable([])
 export const loading = writable(false)
+export const theMovie = writable({})
 
 export async function searchMovies(payload) {
 
@@ -33,7 +34,16 @@ const res = await axios.get(`https://www.omdbapi.com/?apikey=${ONDB_API_KEY}&s=$
         }
     }
 
-    console.log(get(movies))
+    loading.set(false)
+}
 
+export async function searchMovieWithId(id){
+    if(get(loading)) return
+    loading.set(true)
+    const ONDB_API_KEY = '7035c60c'
+    const res = await axios.get(`https://www.omdbapi.com/?apikey=${ONDB_API_KEY}&i=${id}&plot=full`)
+    console.log(res)
+
+    theMovie.set(res.data)
     loading.set(false)
 }

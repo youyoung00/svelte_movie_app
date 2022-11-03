@@ -24,8 +24,6 @@ const res = await axios.get(`https://www.omdbapi.com/?apikey=${ONDB_API_KEY}&s=$
             const res = await axios.get(`https://www.omdbapi.com/?apikey=${ONDB_API_KEY}&s=${title}&type=${type}&y=${year}&page=${page}`)       
             const {Search} = res.data
             movies.update($movies => _unionBy($movies, Search, 'imdbID'))
-                // $movies.push(...Search)
-                // return $movies
         }
     }
 

@@ -20,6 +20,9 @@
             font-family: 'Oswald', sans-serif;
             font-size: 80px;
             line-height: 1;
+            @media #{$mobile} {
+                font-size: 60px;
+            }
             // @media #{$mobile}{
             //     font-size: 60px;
             // }

@@ -4,6 +4,9 @@
     import Header from '~/components/Header.svelte'
     import Footer from '~/components/Footer.svelte'
     import routes from '~/routes'
+
+    import axios from 'axios'
+
 </script>
 
 <Header />
